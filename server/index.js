@@ -36,6 +36,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use("/api/users", require("./routes/users"));
+app.use("/api/favorite", require("./routes/favorite"));
 
 //use this to show the image you have in node js server to client (react js)
 //https://stackoverflow.com/questions/48914987/send-image-path-from-node-js-express-server-to-react-client
@@ -58,5 +59,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
     console.log(`Server Listening on ${port}`);
 });
-
-// b65b18e993a0b6c22592d6a2caf2e6c4
